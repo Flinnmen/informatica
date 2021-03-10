@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="container">
+
+<header>
+    <%- include('../partials/header'); %>
+</header>
+
+<main>
+    <div class="jumbotron">
+        <h2>Waifus</h2>
+        <p><%= tagline %></p>
+        <ul>
+            <% mascots.forEach(function(mascot) { %>
+                <li>
+                    <strong><%= mascot.name %></strong>
+                    representing <%= mascot.organization %>, born <%= mascot.birth_year %>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+    <img src="https://static.wikia.nocookie.net/alltheloids/images/6/6a/Miku.png/revision/latest?cb=20170103211733" alt="Image not found" style="width:500px;height:600px;">
+    <img src="https://i.pinimg.com/originals/6e/16/04/6e1604abc366852511e2f37ebb94b2cf.png" alt="Image not found" style="width:500px;height:600px;">
+</main>
+
+<footer>
+    <%- include('../partials/footer'); %>
+</footer>
+
+</body>
+</html>
+
